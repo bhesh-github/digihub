@@ -1,0 +1,23 @@
+.carousel-wrapper {
+	// position: relative;
+	.carousel {
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+		// position: absolute;
+		padding: 2em 0;
+		background-color: green;
+		.item {
+			background: #0c629a;
+			// margin: 0 26px;
+			margin-left: 26px;
+			// width: 40.7%;
+			// min-width: 586px;
+			// width: 786px;
+			transition: 1s;
+			height: 343px;
+			border-radius: 40px;
+			box-shadow: 0px 4px 4px 0px #00000040;
+		}
+	}
+}

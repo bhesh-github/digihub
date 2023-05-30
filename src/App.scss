@@ -1,0 +1,25 @@
+* {
+	font-family: 'Poppins', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	overflow-x: hidden;
+}
+$backgroundBlue: #02426b;
+$primary-blue: #0e4e8c;
+$secondary-blue: #1448ff;
+$deep-blue: #02416b;
+$primary-grey: #868686;
+$snake-lining: #d9d9d9;
+$input: #d9d9d9;
+$subscribe-input: #d9d9d9;
+
+@import './components/scssPartials/main/header';
+@import './components/scssPartials/main/footer';
+@import './components/scssPartials/pages/home/home';
+
+//
+@import './components/scssPartials/forAll/slider';
+@import './components/scssPartials/forAll/collapsibleTable';
