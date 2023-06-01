@@ -1,0 +1,24 @@
+@import './serviceCard';
+.services-page {
+	background-color: $backgroundBlue;
+	.services-section {
+		padding: 0 120px;
+		.heading {
+			color: #fff;
+			padding-top: 4em;
+			text-align: center;
+			font-family: 'Poppins';
+			font-size: 42px;
+			font-weight: 700;
+			letter-spacing: 0em;
+			margin-bottom: 35px;
+		}
+		.services-wrapper{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2em;
+			padding-bottom:107px;
+		}
+	}
+}

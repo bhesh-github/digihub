@@ -3,7 +3,8 @@ import Button from '@mui/material/Button';
 import { ReactComponent as MessageIcon } from '../../images/getInTouch/mail-icon.svg';
 import { ReactComponent as PhoneIcon } from '../../images/getInTouch/phone-icon.svg';
 import { ReactComponent as LocationIcon } from '../../images/getInTouch/location-icon.svg';
-
+// Flags
+import { ReactComponent as NorwayFlag } from '../../images/forAll/Denmark.svg';
 const GetInTouch = ({ addressData }) => {
 	const formObj = [
 		{ id: 0, label: 'NAME', placeholder: 'Full Name', inputType: 'text' },
@@ -56,6 +57,7 @@ const GetInTouch = ({ addressData }) => {
 				className="country-flag"
 			/>
 		),
+		norway: <NorwayFlag className="country-flag" />,
 	};
 
 	const address = addressData.map((item) => {
@@ -70,10 +72,7 @@ const GetInTouch = ({ addressData }) => {
 			details.one.text === 'Head office:' ? 'more-margin' : '';
 		return (
 			<div className="address" key={id}>
-				{/* <span className='svg-icon'></span> */}
 				<span className="svg-icon-wrapper">{selectedIcon}</span>
-				{/* {iconType['phone']} */}
-				{/* <LocationIcon className="svg-icon" /> */}
 				<span className="details">
 					<p className={`detail one ${detailClass} ${detailClassMore}`}>
 						{selectedFlagForOne}
@@ -133,7 +132,7 @@ const GetInTouch = ({ addressData }) => {
 								</div>
 							))}
 						</div>
-						<Button type='submit' className='submit-btn'>
+						<Button type="submit" className="submit-btn">
 							SEND MESSAGE
 						</Button>
 					</form>
@@ -169,7 +168,7 @@ GetInTouch.defaultProps = {
 			icon: 'phone',
 			details: {
 				one: { flagIcon: 'nepal', text: '+977-1-4258304' },
-				two: { flagIcon: 'nepal', text: '+4591400568' },
+				two: { flagIcon: 'norway', text: '+4591400568' },
 			},
 		},
 		{

@@ -13,7 +13,7 @@ const Testimonial = ({ testimonialData }) => {
 		idx !== 1 && console.log(item, idx);
 	};
 	const testimonialCard = testimonialCardStack.map((item, idx) => {
-		const overlayClass = idx === 1 ? '' : '';
+		const overlayClass = item.id === 1 ? '' : '';
 		const uncheckedCard = idx !== 1 ? 'cursor' : 'cursor';
 		return (
 			<div
@@ -39,6 +39,7 @@ const Testimonial = ({ testimonialData }) => {
 	const CustomDot = ({ onMove, index, onClick, active }) => {
 		// onMove means if dragging or swiping in progress.
 		// active is provided by this lib for checking if the item is active or not.
+		console.log(active);
 		return (
 			<li className={active ? 'active' : 'inactive'} onClick={() => onClick()}>
 				{active ? (
@@ -57,12 +58,20 @@ const Testimonial = ({ testimonialData }) => {
 			items: 5,
 		},
 		desktop: {
-			breakpoint: { max: 3000, min: 1024 },
+			breakpoint: { max: 3000, min: 1150 },
 			items: 2.5,
 		},
-		tablet: {
-			breakpoint: { max: 1024, min: 464 },
+		custom: {
+			breakpoint: { max: 1149, min: 908 },
 			items: 2,
+		},
+		tablet: {
+			breakpoint: { max: 907, min: 700 },
+			items: 1.5,
+		},
+		miniTablet: {
+			breakpoint: { max: 699, min: 465 },
+			items: 1,
 		},
 		mobile: {
 			breakpoint: { max: 464, min: 0 },
@@ -77,7 +86,13 @@ const Testimonial = ({ testimonialData }) => {
 					responsive={responsive}
 					customTransition="all .5s"
 					infinite={true}
-					removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
+					removeArrowOnDeviceType={[
+						'desktop',
+						'tablet',
+						'miniTablet',
+						'mobile',
+						'custom',
+					]}
 					draggable={true}
 					itemClass="style-me"
 					showDots={true}

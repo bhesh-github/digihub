@@ -1,0 +1,95 @@
+.products-page {
+	background-color: $backgroundBlue;
+	.products-section {
+		// padding: 0 120px;
+        // padding: 0 175px;
+        // padding: 0 0px;
+		.heading {
+			padding-top: 4em;
+			color: #fff;
+			text-align: center;
+			font-family: 'Poppins';
+			font-size: 42px;
+			font-weight: 700;
+			letter-spacing: 0em;
+			margin-bottom: 25px;
+		}
+		.cards-wrapper {
+			// display: flex;
+			// flex
+			.card {
+				padding: 2em;
+				// padding-top: 2.5em;
+				// width: 500px;
+				// background-color: #fff;
+				.title {
+					font-family: 'Poppins';
+					font-family: 'DM Sans';
+					font-size: 35px;
+					font-weight: 700;
+					line-height: 26px;
+					letter-spacing: 0.8999999761581421px;
+					text-align: center;
+					color: $primary-blue;
+					color: #fff;
+					margin-bottom: 10px;
+				}
+				.note {
+					font-family: 'DM Sans';
+					font-size: 18px;
+					font-weight: 400;
+					line-height: 32px;
+					letter-spacing: 0em;
+					text-align: center;
+					color: #fff;
+				}
+				.content-cards-wrapper {
+					display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 2em;
+                    margin-top: 2em;
+					.content-card {
+						// border: 2px solid #fff;
+						background-color: #fff;
+						border-radius: 2em;
+						display: flex;
+						width: 500px;
+						gap: 2em;
+						padding: 1.5em;
+						// color: #fff;
+						color: $primary-blue;
+						.icon-wrapper {
+							width: 30%;
+							.icon {
+								height: 6em;
+								width: 6em;
+								flex-grow: 1;
+							}
+						}
+						.dis {
+							flex-grow: 1;
+							.my-title {
+								font-size: 1.7em;
+								// color: #000;
+								font-family: 'DM Sans';
+							}
+							.dis {
+								font-family: 'DM Sans';
+								font-size: 17px;
+								font-weight: 400;
+								line-height: 28px;
+								letter-spacing: 0em;
+								text-align: left;
+								// color: #000;
+							}
+                            .discription-list{
+                                margin-left: 2em;
+                            }
+						}
+					}
+				}
+			}
+		}
+	}
+}

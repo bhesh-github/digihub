@@ -16,7 +16,11 @@ const OurOfferings = ({ ourOfferingsBiskitData }) => {
 				</div>
 				<div className="biskits-wrapper">
 					{ourOfferingsBiskitData.map((item) => {
-						return <OurOfferingsBiskit data={item} key={item.id} />;
+						return (
+							<a href={`/products/#card-${item.id}`}>
+								<OurOfferingsBiskit data={item} key={item.id} />
+							</a>
+						);
 					})}
 				</div>
 			</div>

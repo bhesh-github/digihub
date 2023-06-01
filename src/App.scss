@@ -19,7 +19,11 @@ $subscribe-input: #d9d9d9;
 @import './components/scssPartials/main/header';
 @import './components/scssPartials/main/footer';
 @import './components/scssPartials/pages/home/home';
+@import './components/scssPartials/pages/about/about';
+@import './components/scssPartials/pages/contactUs';
+@import './components/scssPartials/pages/services/services';
+@import './components/scssPartials/pages/products/products';
+@import './components/scssPartials/pages/ourClients';
 
 //
 @import './components/scssPartials/forAll/slider';
-@import './components/scssPartials/forAll/collapsibleTable';

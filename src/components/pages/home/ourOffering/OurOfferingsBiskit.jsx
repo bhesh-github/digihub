@@ -14,7 +14,10 @@ const OurOfferingsBiskit = ({ data }) => {
 	};
 	const selectedIcon = conditions[type];
 	return (
-		<div className="biskit-wrapper" key={id}>
+		<div
+			className="biskit-wrapper"
+			key={id}
+		>
 			<div className="biskit">
 				<div className="blue-part">
 					<span className="title">{title}</span>

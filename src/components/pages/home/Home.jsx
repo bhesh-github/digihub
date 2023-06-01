@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
+
 import CoreAspects from './CoreAspects';
 import OurProducts from './OurProducts';
 import OurOfferings from './ourOffering/OurOfferings';
 import Testimonial from './Testimonial';
 import GetInTouch from '../../../components/forAll/GetInTouch';
-import Footer from '../../main/Footer';
 // Background Images
 import mountains from '../../../images/mountains.png';
 import bridge from '../../../images/bridge.png';
@@ -41,12 +42,14 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 			? setSliceClientNumber(12)
 			: windowWidth <= 1250 && windowWidth > 1020
 			? setSliceClientNumber(10)
-			: windowWidth <= 1020 && windowWidth > 810
+			: windowWidth <= 1020 && windowWidth > 809
 			? setSliceClientNumber(8)
-			: windowWidth <= 810 && windowWidth > 620
+			: windowWidth <= 808 && windowWidth > 620
 			? setSliceClientNumber(6)
 			: windowWidth <= 620 && setSliceClientNumber(4);
 	}, [windowWidth]);
+
+	const navigate = useNavigate();
 	return (
 		<div className="home-page">
 			<div className="blur-gradient-1"></div>
@@ -67,9 +70,7 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 					<p className="slogan">
 						We take care of the tech, you focus on growing your business.
 					</p>
-					<Button
-						className="play-button"
-					>
+					<Button className="play-button">
 						Contact Us
 						<BiPlay className="play-icon" />
 					</Button>
@@ -119,8 +120,14 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 							);
 						})}
 					</div>
-					<Button className='see-more-btn'>See More</Button>
-					
+					<Button
+						className="see-more-btn"
+						onClick={() => {
+							navigate('/ourValuableClients');
+						}}
+					>
+						See More
+					</Button>
 				</div>
 			</div>
 			<div className="big-container">
@@ -130,10 +137,10 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 				<Testimonial />
 				{/* <Slider /> */}
 				<div className="get-in-touch-section">
-					<GetInTouch />
+					<GetInTouch className="get-in-touch-comp" />
 				</div>
 			</div>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 };
@@ -199,66 +206,6 @@ Home.defaultProps = {
 		},
 		{
 			id: 11,
-			img: machhapuchhreBank,
-			name: 'Machhapuchhre Bank Ltd.',
-		},
-		{
-			id: 12,
-			img: agricultureBank,
-			name: 'Agriculture Development Bank Ltd.',
-		},
-		{
-			id: 13,
-			img: citizensBank,
-			name: 'Citizens Bank International Ltd.',
-		},
-		{
-			id: 14,
-			img: everestBank,
-			name: 'Everest Bank Ltd.',
-		},
-		{
-			id: 15,
-			img: excelBank,
-			name: 'Excel Development Bank Ltd.',
-		},
-		{
-			id: 16,
-			img: globalBank,
-			name: 'Global IME Bank Ltd.',
-		},
-		{
-			id: 17,
-			img: greenBank,
-			name: 'Green Development Bank Ltd.',
-		},
-		{
-			id: 18,
-			img: icfcFinance,
-			name: 'ICFC Finance Ltd.',
-		},
-		{
-			id: 19,
-			img: jyotiBank,
-			name: 'Jyoti Bikash Bank Ltd.',
-		},
-		{
-			id: 20,
-			img: kamanaBank,
-			name: 'Kamana Sewa Bikas Bank Ltd.',
-		},
-		{
-			id: 21,
-			img: laxmiBank,
-			name: 'Laxmi Bank Ltd.',
-		},
-		{
-			id: 22,
-			img: lumbiniBank,
-			name: 'Lumbini Bikas Bank Ltd.',
-		},
-		{
-			id: 23,
 			img: machhapuchhreBank,
 			name: 'Machhapuchhre Bank Ltd.',
 		},

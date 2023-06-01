@@ -3,10 +3,12 @@
 	// position: absolute;
 	// z-index: 1;
 	margin: 0 136px;
-	overflow: visible;
+	// overflow: visible;
+	// overflow: hidden;
+	// overflow: hidden;
 	.blur-gradient-3 {
-		z-index: 0;
 		position: absolute;
+		z-index: 1;
 		height: 580px;
 		width: 580px;
 		left: -151px;

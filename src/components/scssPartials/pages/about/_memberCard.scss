@@ -1,0 +1,57 @@
+.member-card {
+	// width: 250px;
+	// height: 350px;
+	box-shadow: 0 0 5px 5px rgb(239, 239, 239);
+	border-radius: 0.5em;
+	padding: 25px;
+	height: max-content;
+	width: max-content;
+	// color: blue;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	.member-img {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: grey;
+		border-radius: 0.5em;
+		height: 250px;
+		width: 250px;
+	}
+	.text-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		height: 30%;
+		.name {
+		}
+		.position {
+			font-size: 12px;
+			color: grey;
+		}
+		.icons {
+			display: flex;
+			gap: 10px;
+
+			.icon {
+				color: #7d877e;
+				background-color: #f1f1f1;
+				border-radius: 50%;
+				height: 25px;
+				width: 25px;
+				padding: 5px;
+				cursor: pointer;
+			}
+			.fb:hover {
+				color: #3b5998;
+			}
+			.github:hover {
+				color: #171515;
+			}
+			.linkedin:hover {
+				color: #0072b1;
+			}
+		}
+	}
+}

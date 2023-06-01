@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InfoIcon from '@mui/icons-material/Info';
+import { NavLink } from 'react-router-dom';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined';
 
@@ -7,20 +7,35 @@ import Logo from '../../images/logo.png';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { GoHome } from 'react-icons/go';
 import { VscChromeClose } from 'react-icons/vsc';
+import { FaServicestack } from 'react-icons/fa';
 const Header = () => {
 	const [sidebarClass, setSidebarClass] = useState('none');
 	sidebarClass === 'block'
-		? (document.body.style.overflow = 'hidden')
-		: (document.body.style.overflow = 'auto');
+		? (document.body.style.overflowY = 'hidden')
+		: (document.body.style.overflowY = 'auto');
+	// document.body.style.overflowX = 'hidden';
 	return (
 		<div className="header">
 			<div className="menu-bar">
-				<img src={Logo} alt="logo" className="logo" />
-				<span className="company-name">DigiHub</span>
-				<span className="item">Home</span>
-				<span className="item">About</span>
-				<span className="item">Services</span>
-				<span className="item">Contact Us</span>
+				<NavLink to="./" className="logo">
+					<img src={Logo} alt="logo" />
+				</NavLink>
+				<NavLink to="./" className="company-name">
+					DigiHub
+				</NavLink>
+				<NavLink to="./" className="item">
+					Home
+				</NavLink>
+				<NavLink to="/about" className="item">
+					About
+				</NavLink>
+
+				<NavLink to="/services" className="item">
+					Services
+				</NavLink>
+				<NavLink to="/contactUs" className="item">
+					Contact Us
+				</NavLink>
 				<RxHamburgerMenu
 					className="hamburger"
 					onClick={() => {
@@ -40,15 +55,20 @@ const Header = () => {
 					/>
 				</div>
 				<div className="item">
-					<GoHome className="item-icon" />
-					Home
+					<NavLink to="./home">
+						<GoHome className="item-icon" />
+						Home
+					</NavLink>
 				</div>
 				<div className="item">
-					<InfoOutlinedIcon className="item-icon" />
-					About
+					<NavLink to="./about">
+						<InfoOutlinedIcon className="item-icon" />
+						About
+					</NavLink>
 				</div>
 				<div className="item">
-					<GoHome className="item-icon" />
+					{/* <GoHome className="item-icon" /> */}
+					<FaServicestack className="item-icon" />
 					Services
 				</div>
 				<div className="item">

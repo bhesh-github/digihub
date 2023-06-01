@@ -25,35 +25,21 @@
 	.outer {
 		display: flex;
 		justify-content: center;
-		// align-items: center;
-		// height: ;
 		.snakey-line {
 			position: absolute;
-			// left: 121px;
-			// left: 155px;
-			// z-index: 0;
 			height: 211.02610778808594px;
 			width: 1199.984130859375px;
-			// border-radius: 0px;
-			// top: 381.99px;
-			// top: 150px;
-			bottom: 1.5em;
-			// margin-bottom: 0;
-			// margin-top: 0;
-			// align-items: center;
+			bottom: 9.5em;
 		}
 		.content-wrapper {
 			position: relative;
 			display: flex;
-			// margin-left: 234.01px;
 			justify-content: center;
-			// height: 800px;
 			.banking-wrapper {
 				margin-top: 194px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				// width: 264px;
 				width: max-content;
 				overflow: visible;
 				.banking {
@@ -232,6 +218,7 @@
 						width: 264px;
 					}
 				}
+
 				.logo-bg {
 					margin-bottom: 58px;
 					background: #0e4e8c;
@@ -247,6 +234,9 @@
 						width: 35px;
 					}
 				}
+			}
+			.clickable-icon {
+				cursor: pointer;
 			}
 		}
 	}
