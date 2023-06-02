@@ -1,9 +1,13 @@
-import React from 'react';
+import { useState } from 'react';
 import ServiceCard from './ServiceCard';
+import ServicesNew from './ServicesNew';
+
 const Services = ({ service }) => {
 	return (
-		<div className="services-page">
-			<div className="services-section">
+		<div className="cover">
+			<div className="blur-gradient-4"></div>
+			<div className="services-page">
+				{/* <div className="services-section">
 				<h1 className="heading">What We Offer ?</h1>
 				<div className="services-wrapper">
 					{service.map((item) => {
@@ -12,6 +16,28 @@ const Services = ({ service }) => {
 							<ServiceCard name={name} discription={discription} key={id} />
 						);
 					})}
+				</div>
+			</div> */}
+				<div className="services-new-section">
+					<div className="heading">
+						<div className="head">
+							What Services <br /> We're Offering
+						</div>
+						<p className="dis">
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book.
+						</p>
+					</div>
+					{service.map((item) => (
+						<ServicesNew
+							service={item}
+							key={item.id}
+							// handleContentClick={handleContentClick}
+							// contentCardClass={contentCardClass}
+						/>
+					))}
 				</div>
 			</div>
 		</div>

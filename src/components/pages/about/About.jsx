@@ -1,7 +1,14 @@
 import React from 'react';
 import MemberCard from './MemberCard';
 import { AiOutlineAim } from 'react-icons/ai';
-
+import groupPhoto from '../../../images/about/group-photo.jpg';
+import fotoA from '../../../images/about/memberPhoto/foto0.jpg';
+import fotoB from '../../../images/about/memberPhoto/foto1.jpg';
+import fotoC from '../../../images/about/memberPhoto/foto2.jpg';
+import fotoD from '../../../images/about/memberPhoto/foto3.jpg';
+import fotoE from '../../../images/about/memberPhoto/foto4.jpg';
+import fotoF from '../../../images/about/memberPhoto/foto5.jpg';
+import managerFoto from '../../../images/about/manager-foto.jpg';
 const About = ({ teamMembers }) => {
 	return (
 		<div className="about-page">
@@ -19,11 +26,7 @@ const About = ({ teamMembers }) => {
 						open banking.
 					</p>
 					<div className="picture">
-							<img
-							src="https://img.freepik.com/free-photo/portrait-business-people-conference-room_329181-19312.jpg?w=1380&t=st=1685607464~exp=1685608064~hmac=e515eba5baa3d19b31c1f96e573b1b65ce45578226fd474e79ccc8a1f2daeb15"
-							alt="foto"
-							className="group-photo"
-						/>
+						<img src={groupPhoto} alt="foto" className="group-photo" />
 					</div>
 				</div>
 				<div className="message-from-director-section">
@@ -61,7 +64,7 @@ const About = ({ teamMembers }) => {
 							<br />- Managing Director
 						</div>
 						<img
-							src="https://images.pexels.com/photos/5668774/pexels-photo-5668774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+							src={managerFoto}
 							alt="manager"
 							className="manager-image"
 						/>
@@ -119,16 +122,14 @@ About.defaultProps = {
 	teamMembers: [
 		{
 			id: 0,
-			image:
-				'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg',
+			image: fotoA,
 			name: 'Harry Styles',
 			position: 'Software Engineer',
 			socialLinks: ['', '', ''],
 		},
 		{
 			id: 1,
-			image:
-				'https://images.unsplash.com/photo-1603775020644-eb8decd79994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+			image: fotoB,
 			name: 'Harriet Watson',
 			position: 'UI/UX Designer',
 			socialLinks: ['', '', ''],
@@ -136,32 +137,28 @@ About.defaultProps = {
 
 		{
 			id: 2,
-			image:
-				'https://img.freepik.com/premium-photo/portrait-man-with-stubble-studio-man-with-stubble-isolated-grey-background_474717-85060.jpg',
+			image: fotoC,
 			name: 'Robort Winner',
 			position: 'UI/UX Designer',
 			socialLinks: ['', '', ''],
 		},
 		{
 			id: 3,
-			image:
-				'https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg',
+			image: fotoD,
 			name: 'Gowen Walter',
 			position: 'Developer',
 			socialLinks: ['', '', ''],
 		},
 		{
 			id: 4,
-			image:
-				'https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg',
+			image: fotoE,
 			name: 'Gowen Walter',
 			position: 'Developer',
 			socialLinks: ['', '', ''],
 		},
 		{
 			id: 5,
-			image:
-				'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg',
+			image: fotoF,
 			name: 'Harry Styles',
 			position: 'Software Engineer',
 			socialLinks: ['', '', ''],
@@ -169,8 +166,7 @@ About.defaultProps = {
 
 		{
 			id: 6,
-			image:
-				'https://images.unsplash.com/photo-1603775020644-eb8decd79994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+			image: fotoA,
 			name: 'Harriet Watson',
 			position: 'UI/UX Designer',
 			socialLinks: ['', '', ''],
@@ -178,8 +174,7 @@ About.defaultProps = {
 
 		{
 			id: 7,
-			image:
-				'https://img.freepik.com/premium-photo/portrait-man-with-stubble-studio-man-with-stubble-isolated-grey-background_474717-85060.jpg',
+			image: fotoC,
 			name: 'Robort Winner',
 			position: 'UI/UX Designer',
 			socialLinks: ['', '', ''],

@@ -17,13 +17,13 @@ const Header = () => {
 	return (
 		<div className="header">
 			<div className="menu-bar">
-				<NavLink to="./" className="logo">
+				<NavLink to="/" className="logo">
 					<img src={Logo} alt="logo" />
 				</NavLink>
-				<NavLink to="./" className="company-name">
+				<NavLink to="/" className="company-name">
 					DigiHub
 				</NavLink>
-				<NavLink to="./" className="item">
+				<NavLink to="/" className="item">
 					Home
 				</NavLink>
 				<NavLink to="/about" className="item">
@@ -54,27 +54,46 @@ const Header = () => {
 						}}
 					/>
 				</div>
-				<div className="item">
-					<NavLink to="./home">
-						<GoHome className="item-icon" />
-						Home
-					</NavLink>
-				</div>
-				<div className="item">
-					<NavLink to="./about">
-						<InfoOutlinedIcon className="item-icon" />
-						About
-					</NavLink>
-				</div>
-				<div className="item">
-					{/* <GoHome className="item-icon" /> */}
-					<FaServicestack className="item-icon" />
+				<NavLink
+					to="/"
+					className="item"
+					onClick={() => {
+						setSidebarClass('none');
+					}}
+				>
+					<GoHome className="item-icon" />
+					Home
+				</NavLink>
+				<NavLink
+					to="/about"
+					className="item"
+					onClick={() => {
+						setSidebarClass('none');
+					}}
+				>
+					<InfoOutlinedIcon className="item-icon" />
+					About
+				</NavLink>
+				<NavLink
+					to="/services"
+					className="item"
+					onClick={() => {
+						setSidebarClass('none');
+					}}
+				>
+					<InfoOutlinedIcon className="item-icon" />
 					Services
-				</div>
-				<div className="item">
+				</NavLink>
+				<NavLink
+					to="/contactUs"
+					className="item"
+					onClick={() => {
+						setSidebarClass('none');
+					}}
+				>
 					<PermPhoneMsgOutlinedIcon className="item-icon" />
 					Contact Us
-				</div>
+				</NavLink>
 			</div>
 			{sidebarClass === 'block' && (
 				<div

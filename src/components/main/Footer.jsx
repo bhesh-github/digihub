@@ -5,8 +5,10 @@ import { ReactComponent as FacebookIcon } from '../../images/footer/facebook.svg
 import { ReactComponent as TwitterIcon } from '../../images/footer/twitter.svg';
 import { ReactComponent as LinkedinIcon } from '../../images/footer/linkedin.svg';
 import { ReactComponent as GithubIcon } from '../../images/footer/github.svg';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Footer = () => {
+	const navigate = useNavigate();
 	return (
 		<div className="footer">
 			<div className="contents">
@@ -27,10 +29,30 @@ const Footer = () => {
 				<div className="quick-links-column">
 					<h6 className="head-element">Quick Links</h6>
 					<span className="links">
-						<span>Home</span>
-						<span>About Us</span>
-						<span>Services</span>
-						<span>Contact Us</span>
+						{/* <a href="/" className="link">
+							Home
+						</a>
+						<a href="/about" className="link">
+							About Us
+						</a>
+						<a href="/services" className="link">
+							Services
+						</a>
+						<a href="/contactUs" className="link">
+							Contact Us
+						</a> */}
+						<Link to="/" className="link">
+							Home
+						</Link>
+						<Link to="/about" className="link">
+							About Us
+						</Link>
+						<Link to="/services" className="link">
+							Services
+						</Link>
+						<Link to="/contactUs" className="link">
+							Contact Us
+						</Link>
 					</span>
 				</div>
 				<div className="subscribe-column">
@@ -42,7 +64,7 @@ const Footer = () => {
 						className="email-input"
 					/>
 					<Button className="subscribe-button">Subscribe</Button>
-					
+
 					<p className="note-text">We wont spam you ever.</p>
 				</div>
 			</div>

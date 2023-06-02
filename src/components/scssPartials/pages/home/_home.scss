@@ -6,12 +6,7 @@
 
 .home-page {
 	height: max-content;
-	
-	// width: 100%;
-	// height: 6875px;
-	// height: 6975px;
-	// background-color: $backgroundBlue;
-
+	overflow-x: hidden;
 	.blur-gradient-1 {
 		position: absolute;
 		z-index: 0;
@@ -38,7 +33,9 @@
 	.banner-section {
 		background-color: $backgroundBlue;
 		height: 850px;
+		overflow-x: hidden;
 		.banner-wrapper {
+			overflow-x: hidden;
 			height: 784px;
 			// height: max-content;
 			width: 100%;
@@ -55,6 +52,7 @@
 			}
 		}
 		.hub-illustration {
+			overflow-x: hidden;
 			position: absolute;
 			// width: 850px;
 			width: 59%;
@@ -97,6 +95,7 @@
 			}
 		}
 		.caption-wrapper {
+			
 			padding-bottom: 8px;
 			position: absolute;
 			margin-top: 330px;

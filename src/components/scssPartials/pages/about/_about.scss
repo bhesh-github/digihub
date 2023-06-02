@@ -2,6 +2,7 @@
 .about-page {
 	background-color: $backgroundBlue;
 	padding-bottom: 0;
+	overflow-x: hidden;
 	.blue-container {
 		padding: 0 120px;
 		.about-section {

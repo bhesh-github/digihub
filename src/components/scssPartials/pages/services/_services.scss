@@ -1,24 +1,71 @@
 @import './serviceCard';
-.services-page {
+.cover {
+	position: relative;
 	background-color: $backgroundBlue;
-	.services-section {
-		padding: 0 120px;
-		.heading {
-			color: #fff;
-			padding-top: 4em;
-			text-align: center;
-			font-family: 'Poppins';
-			font-size: 42px;
-			font-weight: 700;
-			letter-spacing: 0em;
-			margin-bottom: 35px;
-		}
-		.services-wrapper{
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 2em;
-			padding-bottom:107px;
+	overflow-x: hidden;
+	.blur-gradient-4 {
+		position: absolute;
+		z-index:-1;
+		height: 580px;
+		width: 580px;
+		left: 30em;
+		top: -100px;
+		border-radius: 0px;
+		background: #126c9c;
+		filter: blur(100px);
+	}
+	.services-page {
+		.services-new-section {
+			padding: 0 120px;
+			padding-bottom: 12em;
+			.heading {
+				padding-top: 12em;
+				margin-bottom: 3em;
+				display: flex;
+				gap: 3em;
+				.head {
+					margin-top: -10px;
+					// background-color: red;
+					font-family: 'Poppins';
+					font-size: 52px;
+					font-weight: 600;
+					// line-height: 80px;
+					letter-spacing: 0em;
+					text-align: left;
+					color: #fff;
+					width: 35%;
+				}
+				.dis {
+					width: 65%;
+					color: #fff;
+					font-family: 'Poppins';
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 30px;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+			}
 		}
 	}
 }
+// .services-section {
+		// 	padding: 0 120px;
+		// 	.heading {
+		// 		color: #fff;
+		// 		padding-top: 4em;
+		// 		text-align: center;
+		// 		font-family: 'Poppins';
+		// 		font-size: 42px;
+		// 		font-weight: 700;
+		// 		letter-spacing: 0em;
+		// 		margin-bottom: 35px;
+		// 	}
+		// 	.services-wrapper {
+		// 		display: flex;
+		// 		flex-wrap: wrap;
+		// 		justify-content: center;
+		// 		gap: 2em;
+		// 		padding-bottom: 107px;
+		// 	}
+		// }

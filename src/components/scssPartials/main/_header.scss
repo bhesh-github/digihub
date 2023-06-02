@@ -53,10 +53,12 @@
 			}
 		}
 		.item {
+			text-decoration: none;
 			display: flex;
 			align-items: center;
 			margin: 2em 0;
 			gap: 1em;
+			color: #fff;
 			cursor: pointer;
 			.item-icon {
 				width: 25px;

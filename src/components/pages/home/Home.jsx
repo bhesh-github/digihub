@@ -55,7 +55,6 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 			<div className="blur-gradient-1"></div>
 			<div className="blur-gradient-2"></div>
 			<div className="banner-section">
-				{/* <img className="banner" src={Mountains} alt="banner" /> */}
 				<div className="banner-wrapper">
 					<div
 						className="banner-image"

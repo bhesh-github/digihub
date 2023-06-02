@@ -10,14 +10,14 @@ const OurOfferings = ({ ourOfferingsBiskitData }) => {
 				</p>
 			</div>
 			<div className="contents-wrapper">
-				<div className="types">
+				{/* <div className="types">
 					<p className="successful-deployments">SUCCESSFUL DEPLOYMENTS</p>
 					<p className="tam">TAM</p>
-				</div>
+				</div> */}
 				<div className="biskits-wrapper">
 					{ourOfferingsBiskitData.map((item) => {
 						return (
-							<a href={`/products/#card-${item.id}`}>
+							<a href={`/products/#card-${item.id}`} className="link-tag">
 								<OurOfferingsBiskit data={item} key={item.id} />
 							</a>
 						);
