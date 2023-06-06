@@ -1,6 +1,8 @@
 import React from 'react';
 import MemberCard from './MemberCard';
 import { AiOutlineAim } from 'react-icons/ai';
+import { ReactComponent as MissionVector } from '../../../images/about/mission.svg';
+import { ReactComponent as VisionVector } from '../../../images/about/vision.svg';
 import groupPhoto from '../../../images/about/group-photo.jpg';
 import fotoA from '../../../images/about/memberPhoto/foto0.jpg';
 import fotoB from '../../../images/about/memberPhoto/foto1.jpg';
@@ -13,7 +15,7 @@ const About = ({ teamMembers }) => {
 	return (
 		<div className="about-page">
 			<div className="blue-container">
-				<div className="about-section">
+				<div className="about-sections">
 					<h1 className="title">About Us</h1>
 					<p className="discription">
 						Digihub Pvt. Ltd is an umbrella organization supported by national
@@ -61,18 +63,14 @@ const About = ({ teamMembers }) => {
 							electronic typesetting, remaining essentially unchanged. It was
 							popularised in the 1960s with the release of Letraset sheets
 							containing Lorem Ipsum passages. <br />
-							<br />- Managing Director
 						</div>
-						<img
-							src={managerFoto}
-							alt="manager"
-							className="manager-image"
-						/>
+						<img src={managerFoto} alt="manager" className="manager-image" />
 					</div>
 				</div>
 				<div className="mission-and-vision-section">
 					<div className="mission-card">
-						<AiOutlineAim className="icon" />
+						{/* <AiOutlineAim className="icon" /> */}
+						<MissionVector className="icon" />
 						<h1 className="title">Vision</h1>
 						<p className="discription">
 							Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -81,7 +79,7 @@ const About = ({ teamMembers }) => {
 						</p>
 					</div>
 					<div className="mission-card">
-						<AiOutlineAim className="icon" />
+						<VisionVector className="icon" />
 						<h1 className="title">Mission</h1>
 						<p className="discription">
 							Lorem Ipsum is simply dummy text of the printing and typesetting

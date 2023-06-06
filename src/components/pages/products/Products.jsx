@@ -5,12 +5,12 @@ const Products = ({ products }) => {
 	return (
 		<div className="products-page">
 			<div className="products-section">
-				<h1 className="heading">Our Products</h1>
+				<h1 className="heading">Our Offerings</h1>
 				<div className="cards-wrapper">
-					{products.map((item) => {
+					{/* {products.map((item) => {
 						const { id, productName, note, list } = item;
 						return (
-							<div className="card" key={id} id={'card-'+id}>
+							<div className="card" key={id} id={'card-' + id}>
 								<h2 className="title">{productName}</h2>
 								<p className="note">{note}</p>
 								<div className="content-cards-wrapper">
@@ -33,10 +33,42 @@ const Products = ({ products }) => {
 										);
 									})}
 								</div>
-								;
 							</div>
 						);
-					})}
+					})} */}
+					<div className="new-cards-wrapper">
+						{products.map((item) => {
+							const { id, productName, note, list } = item;
+							return (
+								<div className="new-card" key={id}>
+									<div className="title-intro">
+										<h2 className="title">{productName}</h2>
+										<p className="note">{note}</p>
+									</div>
+									<div className="contents">
+										{list.map((item) => {
+											const { id, title, discription, discriptionList } = item;
+											return (
+												<div className="content" key={id}>
+													<div className="icon-wrapper">
+														<SiConsul className="icon" />
+													</div>
+													<div className='text'>
+														<h6 className='title'>{title}</h6>
+														<p className="dis">{discription}</p>
+														<ul className="dis-list">
+															{discriptionList &&
+																discriptionList.map((item) => <li>{item}</li>)}
+														</ul>
+													</div>
+												</div>
+											);
+										})}
+									</div>
+								</div>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>

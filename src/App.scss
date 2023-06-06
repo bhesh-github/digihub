@@ -2,10 +2,18 @@
 	font-family: 'Poppins', sans-serif;
 	padding: 0;
 	margin: 0;
+	// width: 100%;
 	box-sizing: border-box;
+	overflow: none;
 }
-body {
-	overflow-x: hidden;
+.main{
+	width: 100%;
+	max-width: 100vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-items: flex-start;
 }
 $backgroundBlue: #02426b;
 $primary-blue: #0e4e8c;

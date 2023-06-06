@@ -24,7 +24,9 @@ import kamanaBank from '../../../images/clientsLogo/Kamana Sewa Bikas Bank Ltd.p
 import laxmiBank from '../../../images/clientsLogo/Laxmi Bank Ltd.png';
 import lumbiniBank from '../../../images/clientsLogo/Lumbini Bikas Bank Ltd.png';
 import machhapuchhreBank from '../../../images/clientsLogo/Machhapuchhre Bank Ltd.png';
-
+// About Section
+import DgVector from '../../../images/dg-vector.png';
+// import {ReactComp}
 import { BiPlay } from 'react-icons/bi';
 
 const Home = ({ ourClients, ourOfferingsBiskitData }) => {
@@ -52,16 +54,16 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 	const navigate = useNavigate();
 	return (
 		<div className="home-page">
-			<div className="blur-gradient-1"></div>
-			<div className="blur-gradient-2"></div>
 			<div className="banner-section">
+					{/* <div className="blur-gradient-1"></div>
+					<div className="blur-gradient-2"></div> */}
 				<div className="banner-wrapper">
 					<div
 						className="banner-image"
 						style={{ backgroundImage: `url(${mountains})` }}
 					></div>
+					<img className="hub-illustration" src={hub} alt="hub-foto" />
 				</div>
-				<img className="hub-illustration" src={hub} alt="hub-foto" />
 				<div className="caption-wrapper">
 					<h1 className="caption">
 						Digital solutions for industries <br /> across the globe
@@ -69,18 +71,19 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 					<p className="slogan">
 						We take care of the tech, you focus on growing your business.
 					</p>
-					<Button className="play-button">
+					<Button
+						className="play-button"
+						onClick={() => {
+							navigate('/contactUs');
+						}}
+					>
 						Contact Us
 						<BiPlay className="play-icon" />
 					</Button>
 				</div>
 			</div>
 			<div className="about-section">
-				<img
-					src="https://uploads-ssl.webflow.com/603d48021c4d3f9a76f3f408/63100c22376c40ac70d9ce1d_Digital%20Payments%20for%20Business%20Startups%20What%20are%20the%20Pros%20and%20Cons.jpg"
-					alt="payment-foto"
-					className="payment-img"
-				/>
+				<img src={DgVector} alt="payment-foto" className="payment-img" />
 				<div className="text-wrapper">
 					<h1 className="title">About DigiHub</h1>
 					<span className="discription">

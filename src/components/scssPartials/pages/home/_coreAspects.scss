@@ -164,7 +164,8 @@
 		gap: 52px;
 		margin-top: 57px;
 		left: 353px;
-		width: 57%;
+		// width: 57%;
+		width: 74%;
 		height: max-content;
 		.aspiration-img-bg {
 			display: flex;
@@ -211,15 +212,21 @@
 			}
 		}
 	}
+	@media screen and (max-width: 1375px) {
+		.aspiration-wrapper {
+			width: 67%;
+		}
+	}
 	@media screen and (max-width: 1200px) {
 		.aspiration-wrapper {
 			left: 300px;
-			width: 65%;
+			width: 67%;
 		}
 	}
 	@media screen and (max-width: 1100px) {
 		.aspiration-wrapper {
 			left: 230px;
+			width: 70%;
 		}
 	}
 	@media screen and (max-width: 950px) {
@@ -242,7 +249,7 @@
 		left: 513px;
 		display: flex;
 		gap: 52px;
-		width: 49.5%;
+		width: 61%;
 		.aim-img-bg {
 			display: flex;
 			justify-content: center;
@@ -288,6 +295,11 @@
 			}
 		}
 	}
+	@media screen and (max-width: 1375px) {
+		.aim-wrapper {
+			width: 53%;
+		}
+	}
 	@media screen and (max-width: 1200px) {
 		.aim-wrapper {
 			top: 517px;
@@ -323,6 +335,7 @@
 		left: 353px;
 		gap: 52px;
 		width: 52.5%;
+		width: 73%;
 		.mission-img-bg {
 			display: flex;
 			justify-content: center;
@@ -361,12 +374,17 @@
 			text-align: left;
 		}
 	}
+	@media screen and (max-width: 1375px) {
+		.mission-wrapper {
+			width: 65%;
+		}
+	}
 	@media screen and (max-width: 1200px) {
 		.mission-wrapper {
 			top: 770px;
 			left: 353px;
 			gap: 52px;
-			width: 52.5%;
+			// width: 52.5%;
 		}
 	}
 	@media screen and (max-width: 1100px) {
@@ -374,7 +392,7 @@
 			top: 840px;
 			left: 230px;
 			gap: 52px;
-			width: 52.5%;
+			// width: 52.5%;
 		}
 	}
 	@media screen and (max-width: 950px) {
@@ -606,6 +624,7 @@
 @media screen and (max-width: 950px) {
 	.core-aspects-section {
 		height: 2000px;
+		margin-bottom: 3em;
 	}
 }
 @media screen and (max-width: 949px) {

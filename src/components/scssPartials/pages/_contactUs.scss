@@ -1,20 +1,32 @@
 .contact-us-page {
-    // background-color: purple;
+	width: 100%;
 	.wrapper {
+		display: flex;
+		justify-content: center;
 		overflow: hidden;
 		background-color: $backgroundBlue;
-		padding-bottom: 204.82px;
+		// padding-bottom: 204.82px;
 		// padding-top: 170px;
-        padding-top: 12em;
-        padding-bottom: 58em;
-		position: relative;
+		padding-top: 12em;
+		// padding-bottom: 58em;
+		// position: relative;
 		min-height: 1087px;
-		height: max-content;
-		// height: 1500px;
-        // background-color: red;
-        .get-in-touch-comp{
-            // margin-top: 6em;
-            
-        }
+		// height: max-content;
+		// background-color: red;
+	}
+	@media screen and (max-width: 1065px) {
+		.wrapper {
+			height: 1500px;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.wrapper {
+			height: 1830px;
+		}
+	}
+	@media screen and (max-width: 374px) {
+		.wrapper {
+			height: 1850px;
+		}
 	}
 }

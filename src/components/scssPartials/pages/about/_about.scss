@@ -3,9 +3,10 @@
 	background-color: $backgroundBlue;
 	padding-bottom: 0;
 	overflow-x: hidden;
+	width: 100%;
 	.blue-container {
 		padding: 0 120px;
-		.about-section {
+		.about-sections {
 			margin-bottom: 107px;
 			// height: 50em;
 			.title {
@@ -66,13 +67,34 @@
 				}
 				.manager-image {
 					// height: 90%;
-					// height: 50%;	
+					// height: 50%;
 					width: 40%;
+					// width: 350px;
 					height: 550px;
 					// height: max-content;
 				}
 			}
+			@media screen and (max-width: 1150px) {
+				.contents {
+					flex-direction: column;
+					flex-flow: column-reverse;
+					.manager-image {
+						// height: 90%;
+						// height: 50%;
+						width: 50%;
+						// width: 350px;
+						// height: 550px;
+						// height: max-content;
+						float: left;
+						height: auto;
+					}
+					.text {
+						width: 100%;
+					}
+				}
+			}
 		}
+
 		.mission-and-vision-section {
 			margin-top: 107px;
 			padding-bottom: 107px;
@@ -82,6 +104,7 @@
 			justify-content: space-between;
 			// justify-content: flex-end;
 			justify-content: center;
+			// flex-direction: column;
 			gap: 3em;
 			.mission-card {
 				padding: 2em 2em 1em 2em;
@@ -89,12 +112,14 @@
 				width: 36.5em;
 				border-radius: 1em;
 				box-shadow: 0px 4px 4px 0px #00000040;
-				background-color: rgb(255, 255, 255);
+				// background-color: rgb(255, 255, 255);
+				border: 1px solid #fff;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				// gap: 0.5em;
 				color: #0e4e8c;
+				color: #fff;
 				.icon {
 					// color: #1448ff;
 					height: 7em;
@@ -119,8 +144,32 @@
 			}
 		}
 	}
+	@media screen and (max-width: 1000px) {
+		.blue-container {
+			padding: 0 80px;
+		
+		}
+	}
+	@media screen and (max-width: 800px) {
+		.blue-container {
+			padding: 0 50px;
+			.mission-and-vision-section {
+				flex-direction: column;
+				align-items: center;
+				.mission-card {
+					width: auto;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.blue-container {
+			padding: 0 20px;
+			
+		}
+	}
 	.our-team-section {
-		margin-bottom: 107px;
+		padding-bottom: 107px;
 		padding-top: 107px;
 		background-color: #fff;
 		display: flex;
@@ -138,7 +187,8 @@
 		.short-intro {
 			text-align: center;
 			color: grey;
-			width: 615px;
+			// width: 615px;
+			margin: 0 3em;
 		}
 		.member-card-wrapper {
 			margin-top: 4em;

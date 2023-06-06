@@ -22,12 +22,12 @@ const OurProducts = () => {
 							<h5 className="title">BANKING</h5>
 							<p className="sub-title">400+ Financial APIs</p>
 						</div>
-						<div className="logo-bg clickable-icon">
+						<div className="logo-bg">
 							<BankIcon className="bank-icon" />
 						</div>
 					</div>
 					<div className="capital-wrapper">
-						<div className="logo-bg clickable-icon">
+						<div className="logo-bg">
 							<CoinsIcon className="coins-icon" />
 						</div>
 						<div className="capital">
@@ -41,12 +41,12 @@ const OurProducts = () => {
 							<p className="sub-title">Over $5 Billion Loan Disbursed</p>
 						</div>
 
-						<div className="logo-bg clickable-icon">
+						<div className="logo-bg">
 							<HandIcon className="hand-icon" />
 						</div>
 					</div>
 					<div className="delivery-channel-wrapper">
-						<div className="logo-bg clickable-icon">
+						<div className="logo-bg">
 							<WalletIcon className="wallet-icon" />
 						</div>
 						<div className="delivery-channel">

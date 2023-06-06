@@ -8,6 +8,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { GoHome } from 'react-icons/go';
 import { VscChromeClose } from 'react-icons/vsc';
 import { FaServicestack } from 'react-icons/fa';
+import {ReactComponent as ServiceIcon} from '../../images/forAll/services-icon.svg'
 const Header = () => {
 	const [sidebarClass, setSidebarClass] = useState('none');
 	sidebarClass === 'block'
@@ -81,7 +82,8 @@ const Header = () => {
 						setSidebarClass('none');
 					}}
 				>
-					<InfoOutlinedIcon className="item-icon" />
+					{/* <InfoOutlinedIcon className="item-icon" /> */}
+					<ServiceIcon className="item-icon"/>
 					Services
 				</NavLink>
 				<NavLink

@@ -20,10 +20,10 @@ const Footer = () => {
 						cover all your digitization needs.
 					</p>
 					<span className="icons">
-						<FacebookIcon />
-						<TwitterIcon />
-						<LinkedinIcon />
-						<GithubIcon />
+						<FacebookIcon className="icon" />
+						<TwitterIcon className="icon" />
+						<LinkedinIcon className="icon" />
+						<GithubIcon className="icon" />
 					</span>
 				</div>
 				<div className="quick-links-column">
