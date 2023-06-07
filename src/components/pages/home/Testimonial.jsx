@@ -9,9 +9,9 @@ import Gowen from '../../../images/testimonial/user-img.png';
 const Testimonial = ({ testimonialData }) => {
 	const [testimonialCardStack, setTestimonialCardStack] =
 		useState(testimonialData);
-	const handleCardClick = (item, idx) => {
-		idx !== 1 && console.log(item, idx);
-	};
+	// const handleCardClick = (item, idx) => {
+	// 	idx !== 1 && console.log(item, idx);
+	// };
 	const testimonialCard = testimonialCardStack.map((item, idx) => {
 		const overlayClass = item.id === 1 ? '' : '';
 		const uncheckedCard = idx !== 1 ? 'cursor' : 'cursor';
@@ -19,9 +19,9 @@ const Testimonial = ({ testimonialData }) => {
 			<div
 				className={`card ${uncheckedCard} `}
 				key={item.id}
-				onClick={() => {
-					handleCardClick(item, idx);
-				}}
+				// onClick={() => {
+				// 	handleCardClick(item, idx);
+				// }}
 			>
 				{<div className={`${overlayClass}`}></div>}
 				<p className="text">{item.message}</p>
@@ -39,7 +39,6 @@ const Testimonial = ({ testimonialData }) => {
 	const CustomDot = ({ onMove, index, onClick, active }) => {
 		// onMove means if dragging or swiping in progress.
 		// active is provided by this lib for checking if the item is active or not.
-		console.log(active);
 		return (
 			<li className={active ? 'active' : 'inactive'} onClick={() => onClick()}>
 				{active ? (

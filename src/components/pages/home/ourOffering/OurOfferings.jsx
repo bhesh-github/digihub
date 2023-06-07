@@ -23,7 +23,11 @@ const OurOfferings = ({ ourOfferingsBiskitData }) => {
 							</a> */
 						}
 						return (
-							<Link to={`/products/#card-${item.id}`} className="link-tag">
+							<Link
+								to={`/products/#card-${item.id}`}
+								className="link-tag"
+								key={item.id}
+							>
 								<OurOfferingsBiskit data={item} key={item.id} />
 							</Link>
 						);

@@ -55,7 +55,7 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 	return (
 		<div className="home-page">
 			<div className="banner-section">
-					{/* <div className="blur-gradient-1"></div>
+				{/* <div className="blur-gradient-1"></div>
 					<div className="blur-gradient-2"></div> */}
 				<div className="banner-wrapper">
 					<div
@@ -97,6 +97,14 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 							accelerate the adoption of digital payments and lead the way for
 							open banking.
 						</p>
+						<button
+							className="showmore-btn"
+							onClick={() => {
+								navigate('./about');
+							}}
+						>
+							See More
+						</button>
 					</span>
 				</div>
 			</div>
