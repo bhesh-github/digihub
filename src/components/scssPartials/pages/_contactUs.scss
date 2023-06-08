@@ -14,6 +14,7 @@
 		// height: max-content;
 		// background-color: red;
 	}
+
 	@media screen and (max-width: 1065px) {
 		.wrapper {
 			height: 1500px;
@@ -28,5 +29,10 @@
 		.wrapper {
 			height: 1850px;
 		}
+	}
+	.map-container {
+		// background-color: $backgroundBlue;
+		height: 400px;
+		width: 100%;
 	}
 }

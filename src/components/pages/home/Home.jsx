@@ -83,29 +83,43 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 				</div>
 			</div>
 			<div className="about-section">
-				<img src={DgVector} alt="payment-foto" className="payment-img" />
-				<div className="text-wrapper">
-					<h1 className="title">About DigiHub</h1>
-					<span className="discription">
-						<p className="paragraph">
-							Digihub Pvt. Ltd is an umbrella organization supported by national
-							and international stakeholders established to bring together
-							companies, people, and technologies with a unified objective of
-							digital transformation of organizations all over the world with a
-							special focus on digital banking services. The group of companies
-							under DigiHub provide an ecosystem of products and services to
-							accelerate the adoption of digital payments and lead the way for
-							open banking.
-						</p>
-						<button
-							className="showmore-btn"
-							onClick={() => {
-								navigate('./about');
-							}}
-						>
-							See More
-						</button>
-					</span>
+				<div className="about-section-in">
+					<img src={DgVector} alt="payment-foto" className="payment-img" />
+					<div className="text-wrapper">
+						<h1 className="title">About DigiHub</h1>
+						<span className="discription">
+							<p className="paragraph">
+								Digihub Pvt. Ltd is an umbrella organization supported by
+								national and international stakeholders established to bring
+								together companies, people, and technologies with a unified
+								objective of digital transformation of organizations all over
+								the world with a special focus on digital banking services. The
+								group of companies under DigiHub provide an ecosystem of
+								products and services to accelerate the adoption of digital
+								payments and lead the way for open banking.
+							</p>
+							<button
+								className="showmore-btn"
+								onClick={() => {
+									navigate('./about');
+								}}
+							>
+								See More
+							</button>
+						</span>
+					</div>
+				</div>
+				<div className="organizations-solutions">
+					<h1 className="heading">
+						Best Solutions, For All <br /> Organizations
+					</h1>
+					<div className="contents">
+						<div className="icon"></div>
+						<div className="icon"></div>
+						<div className="icon"></div>
+						<div className="icon"></div>
+						<div className="icon"></div>
+					</div>
 				</div>
 			</div>
 			<div className="our-clients-section">
@@ -225,15 +239,15 @@ Home.defaultProps = {
 			id: 0,
 			title: 'BANKING & LENDING',
 			type: 'bankingAndLending',
-			successfulDepolyments: ['30+', 'Banks'],
+			successfulDepolyments: ['30+ Banks'],
 			tam: ['120BFIs', '(Class A, B, C & D)'],
 		},
 		{
 			id: 1,
 			title: 'PAYMENT & APIs',
 			type: 'paymentAndAPIs',
-			successfulDepolyments: ['5 PSPs/', '1 Bank'],
-			tam: ['15 PSPs/', '1 BFIs'],
+			successfulDepolyments: ['5 PSPs/ 1 Bank'],
+			tam: ['15 PSPs/ 1 BFIs'],
 		},
 		{
 			id: 2,
