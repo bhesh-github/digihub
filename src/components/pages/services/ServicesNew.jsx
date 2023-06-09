@@ -2,8 +2,9 @@ import { BsArrowRightShort } from 'react-icons/bs';
 import { AiFillCrown, AiFillExperiment } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
+import graphic from '../../../images/dg-vector.png';
 const ServicesNew = ({ service, idx }) => {
-	const { id, name, discription } = service;
+	const { id, name, img, discription } = service;
 	// const contentRef = useRef();
 	// const handleContentClick = (gotId) => {
 	// 	id !== gotId
@@ -24,14 +25,20 @@ const ServicesNew = ({ service, idx }) => {
 			}}
 		>
 			{c ? (
-				<div className="contents-wrapper">
+				<div className="content-wrapper">
 					<div className="content">
 						{/* <div className="graphic"> */}
-						<AiFillExperiment className="graphic" />
+						{/* <div className="graphic"> */}
+
+						<img src={img} className="graphic" />
+						{/* <AiFillExperiment className="graphic" /> */}
+						{/* </div> */}
 						{/* </div> */}
 						<div className="text-wrapper">
+							<div className="number">{idx + 1}</div>
 							<div className="title">
 								{/* <AiFillCrown className="icon" /> */}
+
 								{name}
 							</div>
 							<p className="dis">{discription}</p>
@@ -39,9 +46,10 @@ const ServicesNew = ({ service, idx }) => {
 					</div>
 				</div>
 			) : (
-				<div className="contents-wrapper">
+				<div className="content-wrapper">
 					<div className="content">
 						<div className="text-wrapper">
+							<h1 className="number">{idx + 1}</h1>
 							<div className="title">
 								{/* <AiFillCrown className="icon" /> */}
 								{name}
@@ -49,7 +57,8 @@ const ServicesNew = ({ service, idx }) => {
 							<p className="dis">{discription}</p>
 						</div>
 						{/* <div className="graphic"></div> */}
-						<AiFillExperiment className="graphic" />
+						{/* <AiFillExperiment className="graphic" /> */}
+						<img src={img} className="graphic" />{' '}
 					</div>
 				</div>
 			)}

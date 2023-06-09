@@ -1,26 +1,25 @@
 @import './serviceCard';
 .cover {
 	position: relative;
-	background-color: $backgroundBlue;
 	overflow-x: hidden;
 	width: 100%;
-	.blur-gradient-4 {
-		position: absolute;
-		z-index: -1;
-		height: 580px;
-		width: 580px;
-		left: 30em;
-		top: -100px;
-		border-radius: 0px;
-		background: #126c9c;
-		filter: blur(100px);
-	}
+	// .blur-gradient-4 {
+	// 	position: absolute;
+	// 	z-index: 0;
+	// 	height: 580px;
+	// 	width: 580px;
+	// 	left: 30em;
+	// 	top: -100px;
+	// 	border-radius: 0px;
+	// 	background: #126c9c;
+	// 	filter: blur(100px);
+	// }
 	.services-page {
 		.services-new-section {
 			padding: 0 120px;
 			padding-bottom: 12em;
 			.heading {
-				padding-top: 12em;
+				padding-top: 6em;
 				margin-bottom: 3em;
 				display: flex;
 				gap: 3em;
@@ -34,20 +33,26 @@
 					// line-height: 80px;
 					letter-spacing: 0em;
 					text-align: center;
-					color: #fff;
-
+					color: $primary-blue;
+					
 					// width: 35%;
 				}
-				.dis {
-					width: 65%;
-					color: #fff;
-					font-family: 'Poppins';
-					font-size: 17px;
-					font-weight: 400;
-					line-height: 30px;
-					letter-spacing: 0em;
-					text-align: left;
-				}
+				// .dis {
+				// 	width: 65%;
+				// 	color: #fff;
+				// 	// color: #02416b;
+				// 	font-family: 'Poppins';
+				// 	font-size: 17px;
+				// 	font-weight: 400;
+				// 	line-height: 30px;
+				// 	letter-spacing: 0em;
+				// 	text-align: left;
+				// }
+			}
+			.service-wrapper{
+				display: flex;
+				flex-direction: column;
+				gap: 5em;
 			}
 		}
 		@media screen and (max-width: 1000px) {

@@ -13,7 +13,7 @@ const About = lazy(() => import('./components/pages/about/About'));
 const ContactUs = lazy(() => import('./components/pages/ContactUs'));
 const Services = lazy(() => import('./components/pages/services/Services'));
 const OurClients = lazy(() => import('./components/pages/OurClients'));
-const Products = lazy(() => import('./components/pages/products/Products'));
+const OurOfferingsDetail = lazy(() => import('./components/pages/home/ourOffering/OurOfferingsDetail'));
 // import ScrollToTop from './components/forAll/ScrollToTop';
 // import Home from './components/pages/home/Home';
 // import NotFoundPage from './components/pages/NotFoundPage';
@@ -31,7 +31,7 @@ function App() {
 		<BrowserRouter>
 			<Suspense fallback={<div></div>}>
 				<main className="main">
-					<Header />
+					{/* <Header /> */}
 					<ScrollToTop />
 					<Routes>
 						<Route path="/">
@@ -41,7 +41,7 @@ function App() {
 							<Route path="/services-detail/:slug" element={<ServicesDetail />} />
 							<Route path="/contactUs" element={<ContactUs />} />
 							<Route path="/ourValuableClients" element={<OurClients />} />
-							<Route path="/products" element={<Products />} />
+							<Route path="/ourofferingsdetail" element={<OurOfferingsDetail />} />
 							<Route path="*" element={<NotFoundPage />} />
 						</Route>
 					</Routes>

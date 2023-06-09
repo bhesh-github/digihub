@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../../main/Header';
 import Button from '@mui/material/Button';
 
 import CoreAspects from './CoreAspects';
@@ -28,8 +29,17 @@ import machhapuchhreBank from '../../../images/clientsLogo/Machhapuchhre Bank Lt
 import DgVector from '../../../images/dg-vector.png';
 // import {ReactComp}
 import { BiPlay } from 'react-icons/bi';
-
-const Home = ({ ourClients, ourOfferingsBiskitData }) => {
+// Organizations Solutions
+import { ReactComponent as Automation } from '../../../images/organizationsSolutions/Automation.svg';
+import { ReactComponent as Fintech } from '../../../images/organizationsSolutions/Fintech.svg';
+import { ReactComponent as Lending } from '../../../images/organizationsSolutions/Lending.svg';
+import { ReactComponent as MachineLearning } from '../../../images/organizationsSolutions/Machine learning.svg';
+import { ReactComponent as Payment } from '../../../images/organizationsSolutions/Payment.svg';
+const Home = ({
+	ourClients,
+	ourOfferingsBiskitData,
+	organizationsSolutions,
+}) => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [sliceClientNumber, setSliceClientNumber] = useState(12);
 
@@ -52,126 +62,145 @@ const Home = ({ ourClients, ourOfferingsBiskitData }) => {
 	}, [windowWidth]);
 
 	const navigate = useNavigate();
+
+	const organizationsSolutionsConditions = {
+		Fintech: <Fintech className="icon" />,
+		Payment: <Payment className="icon" />,
+		Lending: <Lending className="icon" />,
+		Automation: <Automation className="icon" />,
+		'Machine Learning': <MachineLearning className="icon" />,
+	};
 	return (
-		<div className="home-page">
-			<div className="banner-section">
-				{/* <div className="blur-gradient-1"></div>
+		<>
+			<Header isHomePage={true} />
+			<div className="home-page">
+				<div className="banner-section">
+					{/* <div className="blur-gradient-1"></div>
 					<div className="blur-gradient-2"></div> */}
-				<div className="banner-wrapper">
-					<div
-						className="banner-image"
-						style={{ backgroundImage: `url(${mountains})` }}
-					></div>
-					<img className="hub-illustration" src={hub} alt="hub-foto" />
-				</div>
-				<div className="caption-wrapper">
-					<h1 className="caption">
-						Digital solutions for industries <br /> across the globe
-					</h1>
-					<p className="slogan">
-						We take care of the tech, you focus on growing your business.
-					</p>
-					<Button
-						className="play-button"
-						onClick={() => {
-							navigate('/contactUs');
-						}}
-					>
-						Contact Us
-						<BiPlay className="play-icon" />
-					</Button>
-				</div>
-			</div>
-			<div className="about-section">
-				<div className="about-section-in">
-					<img src={DgVector} alt="payment-foto" className="payment-img" />
-					<div className="text-wrapper">
-						<h1 className="title">About DigiHub</h1>
-						<span className="discription">
-							<p className="paragraph">
-								Digihub Pvt. Ltd is an umbrella organization supported by
-								national and international stakeholders established to bring
-								together companies, people, and technologies with a unified
-								objective of digital transformation of organizations all over
-								the world with a special focus on digital banking services. The
-								group of companies under DigiHub provide an ecosystem of
-								products and services to accelerate the adoption of digital
-								payments and lead the way for open banking.
-							</p>
-							<button
-								className="showmore-btn"
-								onClick={() => {
-									navigate('./about');
-								}}
-							>
-								See More
-							</button>
-						</span>
+					<div className="banner-wrapper">
+						<div
+							className="banner-image"
+							style={{ backgroundImage: `url(${mountains})` }}
+						></div>
+						<img className="hub-illustration" src={hub} alt="" />
+					</div>
+					<div className="caption-wrapper">
+						<h1 className="caption">
+							Digital solutions for industries <br /> across the globe
+						</h1>
+						<p className="slogan">
+							We take care of the tech, you focus on growing your business.
+						</p>
+						<Button
+							className="play-button"
+							onClick={() => {
+								navigate('/contactUs');
+							}}
+						>
+							Contact Us
+							<BiPlay className="play-icon" />
+						</Button>
 					</div>
 				</div>
-				<div className="organizations-solutions">
-					<h1 className="heading">
-						Best Solutions, For All <br /> Organizations
-					</h1>
-					<div className="contents">
-						<div className="icon"></div>
-						<div className="icon"></div>
-						<div className="icon"></div>
-						<div className="icon"></div>
-						<div className="icon"></div>
+				<div className="about-section">
+					<div className="about-section-in">
+						<img src={DgVector} alt="" className="payment-img" />
+						<div className="text-wrapper">
+							<h1 className="title">About DigiHub</h1>
+							<span className="discription">
+								<p className="paragraph">
+									Digihub Pvt. Ltd is an umbrella organization supported by
+									national and international stakeholders established to bring
+									together companies, people, and technologies with a unified
+									objective of digital transformation of organizations all over
+									the world with a special focus on digital banking services.
+									The group of companies under DigiHub provide an ecosystem of
+									products and services to accelerate the adoption of digital
+									payments and lead the way for open banking.
+								</p>
+								<button
+									className="showmore-btn"
+									onClick={() => {
+										navigate('./about');
+									}}
+								>
+									See More
+								</button>
+							</span>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div className="our-clients-section">
-				<div className="clients-banner-wrapper">
-					<div
-						className="banner-image"
-						style={{ backgroundImage: `url(${bridge})` }}
-					></div>
-				</div>
-				<div className="elements-wrapper">
-					<h1 className="title">Our Valuable Clients</h1>
-					<div className="clients-logo-wrapper">
-						{ourClients.slice(0, `${sliceClientNumber}`).map((item) => {
-							const { id, img, name } = item;
-							return (
-								<div className="logo" key={id}>
-									<div className="logo-img-wrapper">
-										<img src={img} alt="logo" className="logo-image" />
-									</div>
-									<p className="client-name">{name}</p>
+					<div className="organizations-solutions">
+						<h1 className="heading">
+							Best Solutions, For All <br /> Organizations
+						</h1>
+						<div className="contents">
+							{organizationsSolutions.map((item, idx) => (
+								<div key={idx}>
+									{organizationsSolutionsConditions[item]}
+									<p className="title">{item}</p>
 								</div>
-							);
-						})}
+							))}
+						</div>
 					</div>
-					<Button
-						className="see-more-btn"
-						onClick={() => {
-							navigate('/ourValuableClients');
-						}}
-					>
-						See More
-					</Button>
 				</div>
-			</div>
-			<div className="big-container">
-				<CoreAspects />
-				<OurProducts />
-				<OurOfferings ourOfferingsBiskitData={ourOfferingsBiskitData} />
-				<Testimonial />
-				{/* <Slider /> */}
-				<div className="get-in-touch-section">
-					<GetInTouch className="get-in-touch-comp" />
+				<div className="our-clients-section">
+					<div className="clients-banner-wrapper">
+						<div
+							className="banner-image"
+							style={{ backgroundImage: `url(${bridge})` }}
+						></div>
+					</div>
+					<div className="elements-wrapper">
+						<h1 className="title">Our Valuable Clients</h1>
+						<div className="clients-logo-wrapper">
+							{ourClients.slice(0, `${sliceClientNumber}`).map((item) => {
+								const { id, img, name } = item;
+								return (
+									<div className="logo" key={id}>
+										<div className="logo-img-wrapper">
+											<img src={img} alt="" className="logo-image" />
+										</div>
+										<p className="client-name">{name}</p>
+									</div>
+								);
+							})}
+						</div>
+						<Button
+							className="see-more-btn"
+							onClick={() => {
+								navigate('/ourValuableClients');
+							}}
+						>
+							See More
+						</Button>
+					</div>
 				</div>
+				<div className="big-container">
+					<CoreAspects />
+					<OurProducts />
+					<OurOfferings ourOfferingsBiskitData={ourOfferingsBiskitData} />
+					<Testimonial />
+					{/* <Slider /> */}
+					<div className="get-in-touch-section">
+						<GetInTouch className="get-in-touch-comp" />
+					</div>
+				</div>
+				{/* <Footer /> */}
 			</div>
-			{/* <Footer /> */}
-		</div>
+		</>
 	);
 };
 
 export default Home;
 
 Home.defaultProps = {
+	organizationsSolutions: [
+		'Fintech',
+		'Payment',
+		'Lending',
+		'Automation',
+		'Machine Learning',
+	],
 	ourClients: [
 		{
 			id: 0,

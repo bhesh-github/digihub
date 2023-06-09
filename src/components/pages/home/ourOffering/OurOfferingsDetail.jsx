@@ -1,13 +1,49 @@
 import React from 'react';
 import { SiConsul } from 'react-icons/si';
+import Header from '../../../main/Header';
+import MiniBanner from '../../../forAll/MiniBanner';
+import { ReactComponent as BorkerBackOffice } from '../../../../images/ourOfferings/ourOfferingsDetail/broker back office.svg';
+import { ReactComponent as ChannelManager } from '../../../../images/ourOfferings/ourOfferingsDetail/channel manager.svg';
+import { ReactComponent as Ewallet } from '../../../../images/ourOfferings/ourOfferingsDetail/E-wallet.svg';
+import { ReactComponent as Ekyc } from '../../../../images/ourOfferings/ourOfferingsDetail/ekyc.svg';
+import { ReactComponent as Ibft } from '../../../../images/ourOfferings/ourOfferingsDetail/IBFT & QR switch.svg';
+import { ReactComponent as LoanOrganizationSystem } from '../../../../images/ourOfferings/ourOfferingsDetail/loan organization system.svg';
+import { ReactComponent as MicroLoanEngine } from '../../../../images/ourOfferings/ourOfferingsDetail/micro loan engine.svg';
+import { ReactComponent as MobileBanking } from '../../../../images/ourOfferings/ourOfferingsDetail/mobile banking.svg';
+import { ReactComponent as ProtfolioMgmtSystem } from '../../../../images/ourOfferings/ourOfferingsDetail/protfolio management system.svg';
+import { ReactComponent as SimRegistration } from '../../../../images/ourOfferings/ourOfferingsDetail/sim registration & management.svg';
+import { ReactComponent as TradeMgmtSystem } from '../../../../images/ourOfferings/ourOfferingsDetail/trade management system.svg';
 
 const Products = ({ products }) => {
+	const topicGraphicConditions = {
+		// 'Banking & Lending':,
+		// 'PAYMENTs & APIs':.
+		// 'INVESTMENTs'
+		// 'ONBOARDING'
+	};
+	const listGraphicCondition = {
+		'E-wallet': <Ewallet  className="icon"/>,
+		'Mobile Banking': <MobileBanking className="icon" />,
+		'Loan Origination System': <LoanOrganizationSystem className="icon" />,
+		'Micro Loan Engine': <MicroLoanEngine className="icon" />,
+		'Channel Manager': <ChannelManager className="icon" />,
+		'IBFT & QR Switch': <Ibft className="icon" />,
+		'Broker Back Office': <BorkerBackOffice className="icon" />,
+		'Portfolio Mgmt System': <ProtfolioMgmtSystem className="icon" />,
+		'Trade Mgmt System': <TradeMgmtSystem className="icon" />,
+		'Sim Registration & Management ': <SimRegistration className="icon" />,
+		EKYC: <Ekyc  className="icon"/>,
+	};
+
 	return (
-		<div className="products-page">
-			<div className="products-section">
-				<h1 className="heading">Our Offerings</h1>
-				<div className="cards-wrapper">
-					{/* {products.map((item) => {
+		<>
+			<Header />
+			<MiniBanner caption="Our Offerings" />
+			<div className="products-page">
+				<div className="products-section">
+					{/* <h1 className="heading">Our Offerings</h1> */}
+					<div className="cards-wrapper">
+						{/* {products.map((item) => {
 						const { id, productName, note, list } = item;
 						return (
 							<div className="card" key={id} id={'card-' + id}>
@@ -36,42 +72,48 @@ const Products = ({ products }) => {
 							</div>
 						);
 					})} */}
-					<div className="new-cards-wrapper">
-						{products.map((item) => {
-							const { id, productName, note, list } = item;
-							return (
-								<div className="new-card" key={id}>
-									<div className="title-intro">
-										<h2 className="title">{productName}</h2>
-										<p className="note">{note}</p>
-									</div>
-									<div className="contents">
-										{list.map((item) => {
-											const { id, title, discription, discriptionList } = item;
-											return (
-												<div className="content" key={id}>
-													<div className="icon-wrapper">
-														<SiConsul className="icon" />
+						<div className="new-cards-wrapper">
+							{products.map((item) => {
+								const { id, productName, graphic = '', note, list } = item;
+								return (
+									<div className="new-card" key={id}>
+										<div className="title-intro">
+											<h2 className="title">{productName}</h2>
+											<p className="note">{note}</p>
+										</div>
+										<div className="contents">
+											{list.map((item) => {
+												const { id, title, discription, discriptionList } =
+													item;
+												return (
+													<div className="content" key={id}>
+														<div className="icon-wrapper">
+														{/* <SiConsul className="icon" /> */}
+														{listGraphicCondition[title]}
+
+														</div>
+														<div className="text">
+															<h6 className="title">{title}</h6>
+															<p className="dis">{discription}</p>
+															<ul className="dis-list">
+																{discriptionList &&
+																	discriptionList.map((item, idx) => (
+																		<li key={idx}>{item}</li>
+																	))}
+															</ul>
+														</div>
 													</div>
-													<div className='text'>
-														<h6 className='title'>{title}</h6>
-														<p className="dis">{discription}</p>
-														<ul className="dis-list">
-															{discriptionList &&
-																discriptionList.map((item) => <li>{item}</li>)}
-														</ul>
-													</div>
-												</div>
-											);
-										})}
+												);
+											})}
+										</div>
 									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</div>{' '}
+		</>
 	);
 };
 

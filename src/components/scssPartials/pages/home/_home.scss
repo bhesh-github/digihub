@@ -200,8 +200,8 @@
 		padding: 80px 70px 121px 70px;
 		padding: 80px 70px 80px 70px;
 		.payment-img {
-			width: 40.8%;
-			width: 30%;
+			// width: 40.8%;
+			// width: 30%;
 			width: 400px;
 		}
 		.text-wrapper {
@@ -283,19 +283,29 @@
 			color: #02416b;
 			line-height: 1em;
 			text-align: center;
-			margin-bottom: 1em;
+			margin-bottom: 2em;
 		}
 		.contents {
 			// background-color: green;
 			display: flex;
-			gap: 7em;
+			align-content: flex-end;
+			align-items: flex-end;
+			// align-items: center;
+			gap: 8em;
 			justify-content: center;
 			margin-bottom: 14em;
+			text-align: center;
 			// flex-wrap: wrap;
 			.icon {
-				background-color: #02416b;
-				height: 150px;
-				width: 150px;
+				height: 100px;
+				min-width: 100px;
+			}
+			.title {
+				margin-top: 1em;
+				font-family: 'DM Sans';
+				font-weight: 500;
+				font-size: 1.2em;
+				color: $deep-blue;
 			}
 		}
 	}

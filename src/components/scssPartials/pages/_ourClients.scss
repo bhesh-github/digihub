@@ -1,5 +1,6 @@
 .our-clients-page {
-	background-color: $backgroundBlue;
+	// background-color: $backgroundBlue;
+
 	// height: 500px;
 	// width: 100%;
 	// margin-top: 500px;
@@ -48,6 +49,8 @@
 				border-radius: 15px;
 				width: 80px;
 				height: 80px;
+				box-shadow: 2px 2px 5px 3px rgb(205, 205, 205);
+				// border: 1px solid red;
 				// width: 60px;
 				// height: 60px;
 				.logo-image {
@@ -60,7 +63,8 @@
 				font-size: 16px;
 				font-weight: 400;
 				line-height: 22px;
-				color: #f3f3f3;
+				color: $deep-blue;
+			
 				// font-size: 14px;
 				width: 130px;
 			}

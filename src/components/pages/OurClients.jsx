@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../main/Header';
 // Clients Logo Images
 import agricultureBank from '../../images/clientsLogo/Agriculture Development Bank Ltd.png';
 import citizensBank from '../../images/clientsLogo/Citizens Bank International Ltd.png';
@@ -12,25 +13,30 @@ import kamanaBank from '../../images/clientsLogo/Kamana Sewa Bikas Bank Ltd.png'
 import laxmiBank from '../../images/clientsLogo/Laxmi Bank Ltd.png';
 import lumbiniBank from '../../images/clientsLogo/Lumbini Bikas Bank Ltd.png';
 import machhapuchhreBank from '../../images/clientsLogo/Machhapuchhre Bank Ltd.png';
+import MiniBanner from '../forAll/MiniBanner';
 
-const OurClients = ({ourClients}) => {
+const OurClients = ({ ourClients }) => {
 	return (
-		<div className="our-clients-page">
-			<h1 className="heading">Our Valuable Clients</h1>
-			<div className="clients-logo-wrapper">
-				{ourClients.map((item) => {
-					const { id, img, name } = item;
-					return (
-						<div className="logo" key={id}>
-							<div className="logo-img-wrapper">
-								<img src={img} alt="logo" className="logo-image" />
+		<>
+			<Header />
+			<MiniBanner caption="Our Valuable Clients" />
+			<div className="our-clients-page">
+				{/* <h1 className="heading">Our Valuable Clients</h1> */}
+				<div className="clients-logo-wrapper">
+					{ourClients.map((item) => {
+						const { id, img, name } = item;
+						return (
+							<div className="logo" key={id}>
+								<div className="logo-img-wrapper">
+									<img src={img} alt="logo" className="logo-image" />
+								</div>
+								<p className="client-name">{name}</p>
 							</div>
-							<p className="client-name">{name}</p>
-						</div>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

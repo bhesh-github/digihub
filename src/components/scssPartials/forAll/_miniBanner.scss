@@ -1,0 +1,22 @@
+.mini-banner-comp {
+	position: relative;
+	height: 25em;
+	width: 100%;
+	background-color: silver;
+	margin-top: 6em;
+   
+	mini-img {
+		width: 100%;
+		height: 100%;
+	}
+	.caption {
+		position: absolute;
+        top: 50%;
+		transform: translate(0%, -50%);
+		left: 10%;
+        color: #fff;
+		font-weight: 700;
+		font-size: 4.5em;
+		width: 800px;
+	}
+}

@@ -2,10 +2,10 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	
 	position: absolute;
 	z-index: 5;
 	overflow: visible;
+	// background-color: red;
 	// left: 120px;
 	.back-overlay {
 		position: absolute;
@@ -34,7 +34,6 @@
 		transition: all 0.5s ease;
 		
 		.logo {
-			background-color: red;
 			background-color: #126a9a;
 			box-shadow: 0px 4px 4px 0px #00000040;
 			margin-right: 50px;
@@ -86,6 +85,7 @@
 		// margin: 0 120px;
 		// margin: 0 8.3%;
 		padding-top: 13px;
+		padding-bottom: 13px;
 		display: flex;
 		align-items: center;
 		font-size: 18px;
@@ -130,4 +130,7 @@
 			// margin: 0 50px;
 		}
 	}
+}
+.other-page-header{
+	background-color: $backgroundBlue;
 }

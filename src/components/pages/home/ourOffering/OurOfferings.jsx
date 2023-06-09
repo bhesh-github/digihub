@@ -1,6 +1,7 @@
 import React from 'react';
 import OurOfferingsBiskit from './OurOfferingsBiskit';
 import { Link } from 'react-router-dom';
+import MiniBanner from '../../../forAll/MiniBanner';
 const OurOfferings = ({ ourOfferingsBiskitData }) => {
 	return (
 		<div className="our-offerings-section">
@@ -24,7 +25,7 @@ const OurOfferings = ({ ourOfferingsBiskitData }) => {
 						}
 						return (
 							<Link
-								to={`/products/#card-${item.id}`}
+								to={`/ourofferingsdetail/#card-${item.id}`}
 								className="link-tag"
 								key={item.id}
 							>

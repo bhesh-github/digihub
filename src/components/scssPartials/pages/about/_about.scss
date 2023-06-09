@@ -1,7 +1,7 @@
 @import './memberCard';
 .about-page {
-	background-color: $backgroundBlue;
-	padding-bottom: 0;
+	// background-color: red;
+	// padding-bottom: 0;
 	overflow-x: hidden;
 	width: 100%;
 	.blue-container {
@@ -10,8 +10,8 @@
 			margin-bottom: 107px;
 			// height: 50em;
 			.title {
-				padding-top: 3.3em;
-				color: #fff;
+				padding-top: 1.5em;
+				color: $primary-blue;
 				text-align: center;
 				font-family: 'DM Sans';
 				font-size: 52px;
@@ -21,7 +21,8 @@
 				margin-bottom: 25px;
 			}
 			.discription {
-				color: #fff;
+				padding-top: 5em;
+				color: #02416b;
 				font-family: 'Poppins';
 				font-size: 18px;
 				font-weight: 400;
@@ -30,11 +31,12 @@
 				text-align: center;
 			}
 			.picture {
+				border: 1px solid $primary-blue;
 				margin-top: 3em;
-				background-color: rgb(229, 229, 229);
-				// height: 40em;
 				width: 100%;
+				// height: 500px;
 				.group-photo {
+					// margin-bottom: 15px;
 					height: 100%;
 					width: 100%;
 				}
@@ -49,7 +51,7 @@
 				font-weight: 700;
 				letter-spacing: -1px;
 				text-align: left;
-				color: #fff;
+				color: $primary-blue;
 			}
 			.contents {
 				display: flex;
@@ -57,7 +59,7 @@
 				gap: 2.5em;
 				.text {
 					font-family: 'Poppins';
-					color: #fff;
+					color: #02416b;
 					font-size: 15px;
 					font-weight: 400;
 					line-height: 30px;
@@ -72,6 +74,7 @@
 					// width: 350px;
 					height: 550px;
 					// height: max-content;
+					border: 1px solid #02416b;
 				}
 			}
 			@media screen and (max-width: 1150px) {
@@ -113,17 +116,18 @@
 				border-radius: 1em;
 				box-shadow: 0px 4px 4px 0px #00000040;
 				// background-color: rgb(255, 255, 255);
-				border: 1px solid #fff;
+				border: 1px solid #0e4e8c;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				// gap: 0.5em;
 				color: #0e4e8c;
-				color: #fff;
+
 				.icon {
 					// color: #1448ff;
 					height: 7em;
 					width: 7em;
+					color: #0e4e8c;
 					// color: #fff;
 				}
 				.title {
@@ -147,7 +151,6 @@
 	@media screen and (max-width: 1000px) {
 		.blue-container {
 			padding: 0 80px;
-		
 		}
 	}
 	@media screen and (max-width: 800px) {
@@ -165,7 +168,6 @@
 	@media screen and (max-width: 600px) {
 		.blue-container {
 			padding: 0 20px;
-			
 		}
 	}
 	.our-team-section {
