@@ -12,17 +12,17 @@ import { ReactComponent as MicroLoanEngine } from '../../../../images/ourOfferin
 import { ReactComponent as MobileBanking } from '../../../../images/ourOfferings/ourOfferingsDetail/mobile banking.svg';
 import { ReactComponent as ProtfolioMgmtSystem } from '../../../../images/ourOfferings/ourOfferingsDetail/protfolio management system.svg';
 import { ReactComponent as SimRegistration } from '../../../../images/ourOfferings/ourOfferingsDetail/sim registration & management.svg';
-import { ReactComponent as TradeMgmtSystem } from '../../../../images/ourOfferings/ourOfferingsDetail/trade management system.svg';
-
+// import { ReactComponent as TradeMgmtSystem } from '../../../../images/ourOfferings/ourOfferingsDetail/trade management system.svg';
+import tradeMgmt from '../../../../images/ourOfferings/ourOfferingsDetail/trade.png';
 const Products = ({ products }) => {
-	const topicGraphicConditions = {
-		// 'Banking & Lending':,
-		// 'PAYMENTs & APIs':.
-		// 'INVESTMENTs'
-		// 'ONBOARDING'
-	};
+	// const topicGraphicConditions = {
+	// 	// 'Banking & Lending':,
+	// 	// 'PAYMENTs & APIs':.
+	// 	// 'INVESTMENTs'
+	// 	// 'ONBOARDING'
+	// };
 	const listGraphicCondition = {
-		'E-wallet': <Ewallet  className="icon"/>,
+		'E-wallet': <Ewallet className="icon" />,
 		'Mobile Banking': <MobileBanking className="icon" />,
 		'Loan Origination System': <LoanOrganizationSystem className="icon" />,
 		'Micro Loan Engine': <MicroLoanEngine className="icon" />,
@@ -30,9 +30,11 @@ const Products = ({ products }) => {
 		'IBFT & QR Switch': <Ibft className="icon" />,
 		'Broker Back Office': <BorkerBackOffice className="icon" />,
 		'Portfolio Mgmt System': <ProtfolioMgmtSystem className="icon" />,
-		'Trade Mgmt System': <TradeMgmtSystem className="icon" />,
+		// 'Trade Mgmt System': <TradeMgmtSystem className="icon" />,
 		'Sim Registration & Management ': <SimRegistration className="icon" />,
-		EKYC: <Ekyc  className="icon"/>,
+		EKYC: <Ekyc className="icon" />,
+		// 'Trade Mgmt System': <TradeMgmt className="icon" />,
+		'Trade Mgmt System': <img src={tradeMgmt} className="icon" />,
 	};
 
 	return (
@@ -88,9 +90,8 @@ const Products = ({ products }) => {
 												return (
 													<div className="content" key={id}>
 														<div className="icon-wrapper">
-														{/* <SiConsul className="icon" /> */}
-														{listGraphicCondition[title]}
-
+															{/* <SiConsul className="icon" /> */}
+															{listGraphicCondition[title]}
 														</div>
 														<div className="text">
 															<h6 className="title">{title}</h6>

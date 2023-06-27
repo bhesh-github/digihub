@@ -6,7 +6,7 @@ const MiniBanner = ({ caption }) => {
 			<img
 				src={miniBannerImg}
 				className="mini-img"
-				style={{ width: '100%', height: '100%' }}
+				style={{ height: '17em', width: '100%', objectFit: 'cover' }}
 			/>
 			<h1 className="caption">{caption}</h1>
 		</div>

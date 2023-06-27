@@ -129,19 +129,21 @@ const Home = ({
 							</span>
 						</div>
 					</div>
-					<div className="organizations-solutions">
-						<h1 className="heading">
-							Best Solutions, For All <br /> Organizations
-						</h1>
-						<div className="contents">
-							{organizationsSolutions.map((item, idx) => (
-								<div key={idx}>
-									{organizationsSolutionsConditions[item]}
-									<p className="title">{item}</p>
-								</div>
-							))}
+						<div className="organizations-solutions">
+							<h1 className="heading">
+								Best Solutions,
+								<br />
+								For All Organizations
+							</h1>
+							<div className="contents">
+								{organizationsSolutions.map((item, idx) => (
+									<div key={idx}>
+										{organizationsSolutionsConditions[item]}
+										<p className="title">{item}</p>
+									</div>
+								))}
+							</div>
 						</div>
-					</div>
 				</div>
 				<div className="our-clients-section">
 					<div className="clients-banner-wrapper">

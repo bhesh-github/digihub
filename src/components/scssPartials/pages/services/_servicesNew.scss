@@ -159,17 +159,16 @@
 			align-items: center;
 			.graphic {
 				cursor: pointer;
-				// width: 300px;
-				// min-width: 500px;
 				width: 400px;
-				// height: 500px;
 				color: $primary-blue;
-				transition: 0.5s;
+				// transition: all 0.5s ease-in-out;
 			}
-			// .graphic:hover{
-			// 	margin-bottom: 3em;
-
-			// }
+			.graphic:hover {
+				// position: relative;
+				// // margin-bottom: 3em;
+				// bottom: 3em;
+				// transition: all 0.5s ease-in-out;
+			}
 			.text-wrapper {
 				padding: 1em 0em;
 				.number {
@@ -207,6 +206,35 @@
 					text-align: left;
 					text-align: justify;
 				}
+			}
+		}
+		@media screen and (max-width: 1199px) {
+			.content {
+				gap: 4em;
+				.graphic {
+					width: 350px;
+				}
+				@media screen and (max-width: 900px) {
+					.graphic {
+						width: 300px;
+					}
+				}
+				@media screen and (max-width: 500px) {
+					.graphic {
+						width: 250px;
+					}
+				}
+				@media screen and (max-width: 400px) {
+					.graphic {
+						width: 200px;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 800px) {
+			.content {
+				flex-direction: column;
 			}
 		}
 	}

@@ -1,22 +1,74 @@
 .mini-banner-comp {
 	position: relative;
-	height: 25em;
 	width: 100%;
 	background-color: silver;
 	margin-top: 6em;
-   
+	height: 17em;
 	mini-img {
-		width: 100%;
-		height: 100%;
+		// height: 17em;
+		// // height: 100%;
+		// width: 100%;
+		// height: 100%;
+		// object-fit: cover;
 	}
 	.caption {
 		position: absolute;
-        top: 50%;
+		top: 50%;
 		transform: translate(0%, -50%);
 		left: 10%;
-        color: #fff;
-		font-weight: 700;
-		font-size: 4.5em;
-		width: 800px;
+		color: #fff;
+		font-weight: 600;
+		font-size: 3em;
+		// width: 800px;
+	}
+	@media screen and (max-width: 1150px) {
+		.caption {
+			position: absolute;
+			top: 50%;
+			transform: translate(0%, -50%);
+			left: 10%;
+			color: #fff;
+			font-weight: 600;
+			font-size: 2.5em;
+			// width: 800px;
+		}
+	}
+	@media screen and (max-width: 930px) {
+		.caption {
+			position: absolute;
+			top: 50%;
+			transform: translate(0%, -50%);
+			left: 10%;
+			color: #fff;
+			font-weight: 600;
+			font-size: 2em;
+			// width: 800px;
+		}
+	}
+	@media screen and (max-width: 755px) {
+		.caption {
+			width: 300px;
+			position: absolute;
+			top: 50%;
+			transform: translate(0%, -50%);
+			left: 7%;
+			color: #fff;
+			font-weight: 600;
+			font-size: 2em;
+			// width: 800px;
+		}
+	}
+	@media screen and (max-width: 555px) {
+		.caption {
+			width: 300px;
+			position: absolute;
+			top: 50%;
+			transform: translate(0%, -50%);
+			left: 7%;
+			color: #fff;
+			font-weight: 600;
+			font-size: 2em;
+			// width: 800px;
+		}
 	}
 }

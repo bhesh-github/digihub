@@ -63,7 +63,7 @@
 			.inner {
 				// display: flex;
 				// justify-content: center;
-				text-align: justify;
+				// text-align: justify;
 				// flex-direction: column;
 				.c-icon {
 					// height: 200px;
@@ -73,42 +73,77 @@
 					margin-right: 4em;
 					margin-bottom: 3em;
 					float: left;
-					// .icon {
-					// 	width: 100%;
-					// 	height: 100%;
-					// 	color: $primary-blue;
-					// }
 				}
 				.title {
 					// margin-bottom: 3px;
 					font-size: 2em;
 					font-weight: 600;
+					text-align: left;
 				}
-				.description {
-					font-family: 'DM Sans';
-					font-size: 20px;
-					line-height: 32px;
+				.alignment {
 					text-align: justify;
-					.middle-img {
-						height: 200px;
-						width: 100%;
+					.description {
+						font-family: 'DM Sans';
+						font-size: 20px;
+						line-height: 32px;
+						.middle-img {
+							height: 200px;
+							width: 100%;
+						}
 					}
 				}
-				.description-png {
-					width: 60%;
-					align-self: center;
-					justify-self: center;
-					margin-bottom: 3em;
-					margin-top: 3em;
+				.img-div {
+					background-color: peru;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					padding: 4em 0;
+					.description-png {
+						overflow-x: scroll;
+						// min-width: 500px;
+						width: 60%;
+						align-self: center;
+						justify-self: center;
+						margin-bottom: 3em;
+						margin-top: 3em;
+					}
+					@media screen and (max-width: 1000px) {
+						.description-png {
+							width: 70%;
+						}
+					}
+					@media screen and (max-width: 850px) {
+						.description-png {
+							width: 80%;
+						}
+					}
 				}
+				// @media screen and (max-width: 700px) {
+				// 	.img-div {
+				// 		overflow-x: auto;
+				// 		width: 100%;
+				// 		.description-png {
+				// 			width:800px;
+				// 		}
+				// 	}
+				// }
 			}
 		}
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 650px) {
 			.content {
 				flex-direction: column;
 				gap: 2em;
-				.c-icon {
-					align-self: center;
+				.inner {
+					display: flex;
+					flex-direction: column;
+					.title {
+						text-align: left;
+						float: none;
+						// background-color: rgb(0, 0, 0);
+					}
+					.c-icon {
+						// float: none;
+					}
 				}
 			}
 		}

@@ -1,10 +1,6 @@
 .products-page {
-	// background-color: $backgroundBlue;
 	background-color: #fff;
 	.products-section {
-		// padding: 0 120px;
-		// padding: 0 175px;
-		// padding: 0 0px;
 		padding-bottom: 5em;
 		.heading {
 			padding-top: 4em;
@@ -17,87 +13,10 @@
 			letter-spacing: 0em;
 			margin-bottom: 25px;
 		}
-		// .cards-wrapper {
-		// 	// display: flex;
-		// 	// flex
-		// 	.card {
-		// 		padding: 2em;
-		// 		// padding-top: 2.5em;
-		// 		// width: 500px;
-		// 		// background-color: #fff;
-		// 		.title {
-		// 			font-family: 'Poppins';
-		// 			font-family: 'DM Sans';
-		// 			font-size: 35px;
-		// 			font-weight: 700;
-		// 			line-height: 26px;
-		// 			letter-spacing: 0.8999999761581421px;
-		// 			text-align: center;
-		// 			color: $primary-blue;
-		// 			color: #fff;
-		// 			margin-bottom: 10px;
-		// 		}
-		// 		.note {
-		// 			font-family: 'DM Sans';
-		// 			font-size: 18px;
-		// 			font-weight: 400;
-		// 			line-height: 32px;
-		// 			letter-spacing: 0em;
-		// 			text-align: center;
-		// 			color: #fff;
-		// 		}
-		// 		.content-cards-wrapper {
-		// 			display: flex;
-		// 			flex-wrap: wrap;
-		// 			justify-content: center;
-		// 			gap: 2em;
-		// 			margin-top: 2em;
-		// 			.content-card {
-		// 				// border: 2px solid #fff;
-		// 				background-color: #fff;
-		// 				border-radius: 2em;
-		// 				display: flex;
-		// 				width: 500px;
-		// 				gap: 2em;
-		// 				padding: 1.5em;
-		// 				// color: #fff;
-		// 				color: $primary-blue;
-		// 				.icon-wrapper {
-		// 					width: 30%;
-		// 					.icon {
-		// 						height: 6em;
-		// 						width: 6em;
-		// 						flex-grow: 1;
-		// 					}
-		// 				}
-		// 				.dis {
-		// 					flex-grow: 1;
-		// 					.my-title {
-		// 						font-size: 1.7em;
-		// 						// color: #000;
-		// 						font-family: 'DM Sans';
-		// 					}
-		// 					.dis {
-		// 						font-family: 'DM Sans';
-		// 						font-size: 17px;
-		// 						font-weight: 400;
-		// 						line-height: 28px;
-		// 						letter-spacing: 0em;
-		// 						text-align: left;
-		// 						// color: #000;
-		// 					}
-		// 					.discription-list {
-		// 						margin-left: 2em;
-		// 					}
-		// 				}
-		// 			}
-		// 		}
-		// 	}
 		.new-cards-wrapper {
 			margin-top: 5em;
 			// height: 500px;
 			width: 100%;
-			// background-color: rgb(192, 192, 192);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -121,7 +40,7 @@
 					display: flex;
 					flex-direction: column;
 					gap: 1em;
-					width: 60%;
+					width: 100%;
 					.content {
 						display: flex;
 						gap: 1em;
@@ -132,9 +51,45 @@
 							.icon {
 								width: 30px;
 								height: 30px;
-
-								// height: 100%;
-								// height: 30px;
+							}
+						}
+						.text {
+							.title {
+								font-size: 1.2em;
+							}
+							.dis {
+								text-align: justify;
+							}
+							.dis-list {
+								margin-left: 1em;
+							}
+						}
+					}
+				}
+			}
+			@media screen and (max-width: 750px) {
+				.new-card {
+					flex-direction: column;
+					gap: 3em;
+					.title-intro {
+						width: 60%;
+					}
+				}
+				.contents {
+					display: flex;
+					flex-direction: column;
+					gap: 1em;
+					width: 100%;
+					.content {
+						display: flex;
+						gap: 1em;
+						// align-items: flex-start;
+						.icon-wrapper {
+							width: max-content;
+							height: max-content;
+							.icon {
+								width: 30px;
+								height: 30px;
 							}
 						}
 						.text {
@@ -148,6 +103,12 @@
 							}
 						}
 					}
+				}
+			}
+			@media screen and (max-width: 550px) {
+				.new-card {
+					padding: 2em;
+					gap: 2em;
 				}
 			}
 		}
